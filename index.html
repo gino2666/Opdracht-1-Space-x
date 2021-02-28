@@ -156,7 +156,7 @@
 									<h3>Mars Atmosphere</h3>
 								</div>
 								<div class="card-body">
-									<canvas id="doughnut-chart" width="800" height="450"></canvas>
+									<canvas id="myChart" width="800" height="450"></canvas>
 								</div>
 							</div>
 						</div>
@@ -181,7 +181,9 @@
 
 <script type="text/javascript">
 
-	new Chart(document.getElementById("doughnut-chart"), {
+	let myChart1 = document.getElementById("myChart").getContext('2d');
+
+	let chart1 = new Chart(myChart1, {
 		type: 'doughnut',
 		data: {
 		labels: ["Nitrogen", "Argon", "Oxygen", "Carbon dioxide"],
